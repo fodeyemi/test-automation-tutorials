@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "./"
+      ],
+      "test/*": [
+        "./test/*"
+      ]
+    },
+    "types": [
+      "node",
+      "webdriverio"
+    ]
+  },
+  "include": [
+    "./test/**/*.ts"
+  ]
+}
