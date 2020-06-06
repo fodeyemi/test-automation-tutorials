@@ -1,4 +1,4 @@
-# test-automation-tutorials
+# Test Automation with WebDriver 
 
 ## Topics
 * Project set up
