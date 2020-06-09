@@ -1,7 +1,6 @@
 # Test Automation with WebDriver 
 
 ## Topics
-* Project set up
 * Test Framework design - Design patterns
 * Locating elements and Page Objects
 * Refactor to use Cucumber
@@ -10,3 +9,9 @@
 * Git branching and Pull Requests
 * Docker basics - remote testing
 * Jenkins basics - CI Ready
+
+## Project set up
+* Install Node & NPM
+* Run _npm ci_
+* Run _npx wdio wdio.conf.js_ to execute test
+* If test runs project has been successfully set up
