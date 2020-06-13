@@ -17,6 +17,7 @@
 * If test runs project has been successfully set up
 
 ## Useful links
+* [Design Patterns](https://www.tutorialspoint.com/design_pattern/index.htm)
 * [WebdriverIO](https://webdriver.io/docs/gettingstarted.html)
 * [Typescript](https://www.typescriptlang.org/docs/home.html)
 * [Node](https://nodejs.org/en/docs/)
