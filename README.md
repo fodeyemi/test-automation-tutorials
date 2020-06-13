@@ -15,3 +15,13 @@
 * Run _npm ci_
 * Run _npx wdio wdio.conf.js_ to execute test
 * If test runs project has been successfully set up
+
+## Useful links
+* [WebdriverIO](https://webdriver.io/docs/gettingstarted.html)
+* [Typescript](https://www.typescriptlang.org/docs/home.html)
+* [Node](https://nodejs.org/en/docs/)
+* [NPM](https://www.npmjs.com/)
+* [Cucumber](https://cucumber.io/docs/cucumber/)
+* [Git](https://git-scm.com/docs)
+* [Docker](https://docs.docker.com/)
+* [Jenkins](https://www.jenkins.io/doc/)
