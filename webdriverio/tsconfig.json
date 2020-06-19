@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "moduleResolution": "node",
+    "allowJs": true,
     "target": "es5",
+    "noEmit": true,
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
@@ -14,10 +17,13 @@
     },
     "types": [
       "node",
-      "webdriverio"
+      "webdriverio",
+      "jest",
+      "mocha"
     ]
   },
   "include": [
     "./test/**/*.ts"
-  ]
+  ],
+  "exclude": ["node_modules"]
 }
