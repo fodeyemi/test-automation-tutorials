@@ -10,11 +10,11 @@ export class WebdriverIOPage implements WebPage {
     clickAnElement(selector: string) {
     }
 
-    openWebPage() {
-        browser.url(url);
+    async openWebPage() {
+        await browser.url(url);
     }
 
-    assertWebPageTitle() {
-        expect(browser).toHaveTitle('WebdriverIO · Next-gen browser and mobile automation test framework for Node.js')
+    getWebPageTitle() {
+        return browser.getTitle();
     }
 }

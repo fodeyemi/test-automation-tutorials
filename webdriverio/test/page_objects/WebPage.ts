@@ -6,5 +6,5 @@ export interface WebPage {
 
     clickAnElement(selector: string);
 
-    assertWebPageTitle();
+    getWebPageTitle();
 }

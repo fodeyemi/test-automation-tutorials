@@ -1,19 +1,21 @@
 import {WebPage} from "test/page_objects/WebPage";
 
+const url = 'https://www.google.co.uk/'
+
 export class GooglePage implements WebPage {
 
     clickAnElement(selector: string) {
     }
 
-    openWebPage() {
-
+    async openWebPage() {
+        await browser.url(url)
     }
 
     searchForSomething(searchItem: string) {
     }
 
-    assertWebPageTitle() {
-        expect(browser).toHaveTitle('Google')
+    getWebPageTitle() {
+        return browser.getTitle();
     }
 
 }
