@@ -4,14 +4,14 @@ import {WebPage} from "test/page_objects/WebPage";
 
 export class WebPageFactory {
 
-    public getWebTestPage(url: string): WebPage {
-        switch (url) {
+    public getWebTestPage(pageUnderTest: string): WebPage {
+        switch (pageUnderTest) {
             case 'google':
                 return new GooglePage();
             case 'webdriverIo':
                 return new WebdriverIOPage();
             default:
-                throw new Error('url is invalid')
+                throw new Error('Page is invalid')
         }
     }
 }
