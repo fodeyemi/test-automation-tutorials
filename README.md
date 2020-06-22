@@ -1,15 +1,15 @@
-# Test Automation with WebDriver 
+# Test Automation with WebDriverIO (Node JS)
 
 ## Topics
 * Test Framework design - Page Objects - Factory pattern
-* Locating elements
+* Locating elements - Page Objects
 * Refactor to use Cucumber
 * Test execution & Test Reporting
-* Git basics
 * Git branching and Pull Requests
 * Docker basics - remote testing
 * Jenkins basics - CI Ready
 * Mocking
+* Cross browser testing
 
 ## Project set up
 * Install Node & NPM
