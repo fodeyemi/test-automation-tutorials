@@ -6,10 +6,10 @@ const webPageFactory = new WebPageFactory();
 describe('test web pages', () => {
     it('webdriver io page should have the right title', () => {
         let webdriverIoPage: WebPage;
-        webdriverIoPage = webPageFactory.getWebTestPage('webdriverIo')
+        webdriverIoPage = webPageFactory.getWebTestPage('webdriverIo');
         webdriverIoPage.openWebPage();
         const webdriverPageTitle = webdriverIoPage.getWebPageTitle();
-        expect(webdriverPageTitle).toBe("WebdriverIO · Next-gen browser and mobile automation test framework for Node.js")
+        expect(webdriverPageTitle).toBe("WebdriverIO · Next-gen browser and mobile automation test framework for Node.js");
     });
 
     it('google page should have the right title', () => {
@@ -17,6 +17,6 @@ describe('test web pages', () => {
         googlePage = webPageFactory.getWebTestPage('google')
         googlePage.openWebPage();
         const googlePageTitle = googlePage.getWebPageTitle();
-        expect(googlePageTitle).toBe("Google")
+        expect(googlePageTitle).toBe("Google");
     });
 })
