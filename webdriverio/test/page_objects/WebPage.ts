@@ -7,4 +7,6 @@ export interface WebPage {
     clickAnElement(selector: string);
 
     getWebPageTitle();
+
+    assertSearchResult(value: string): any;
 }
