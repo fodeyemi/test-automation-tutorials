@@ -14,7 +14,7 @@
 ## Project set up
 * Install Node & NPM
 * Run _npm ci_
-* Run _npx wdio wdio.conf.js_ to execute test
+* Run _npm test_ to execute test
 * If test runs project has been successfully set up
 
 ## Useful links
