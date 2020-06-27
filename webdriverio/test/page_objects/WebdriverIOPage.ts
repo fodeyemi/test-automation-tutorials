@@ -7,9 +7,6 @@ export class WebdriverIOPage implements WebPage {
     searchForSomething(searchItem: string) {
     }
 
-    clickAnElement(selector: string) {
-    }
-
     async openWebPage() {
         await browser.url(url);
     }
@@ -18,7 +15,6 @@ export class WebdriverIOPage implements WebPage {
         return browser.getTitle();
     }
 
-    assertSearchResult(value: string): string {
-        return 'false';
+    assertSearchResult() {
     }
 }

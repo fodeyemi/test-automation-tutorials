@@ -4,9 +4,7 @@ export interface WebPage {
 
     searchForSomething(searchItem: string);
 
-    clickAnElement(selector: string);
-
     getWebPageTitle();
 
-    assertSearchResult(value: string): any;
+    assertSearchResult();
 }
