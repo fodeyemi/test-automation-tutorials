@@ -5,6 +5,7 @@ const url = 'https://www.google.co.uk/'
 export class GooglePage implements WebPage {
 
     searchBox: any;
+    luckyButton?: any;
 
     async openWebPage() {
         await browser.url(url)
@@ -15,6 +16,15 @@ export class GooglePage implements WebPage {
         await this.searchBox.waitForExist();
         await this.searchBox.addValue(searchItem);
         await browser.keys('Enter');
+    }
+
+    async searchUsingLuckyButton?(searchItem: string) {
+        this.searchBox = await $('[name="q"]');
+        await this.searchBox.waitForExist();
+        await this.searchBox.addValue(searchItem);
+        const divElem = await $$('.UUbT9 center input');
+        await divElem[1].waitForEnabled();
+        await divElem[1].click();
     }
 
     getWebPageTitle() {

@@ -1,8 +1,12 @@
 export interface WebPage {
 
-    searchBox;
+    readonly searchBox;
+
+    luckyButton?: any;
 
     openWebPage();
+
+    searchUsingLuckyButton?(searchItem: string);
 
     searchForSomething(searchItem: string);
 

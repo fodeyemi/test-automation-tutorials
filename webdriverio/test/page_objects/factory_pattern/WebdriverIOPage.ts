@@ -6,17 +6,24 @@ export class WebdriverIOPage implements WebPage {
 
     searchBox;
 
-    searchForSomething(searchItem: string) {
+    async searchForSomething(searchItem: string) {
+        this.searchBox = await $('#search_input_react');
+        await this.searchBox.waitForExist();
+        await this.searchBox.addValue(searchItem);
+        await browser.pause(500); // todo: find a better way
+        await browser.keys('Enter');
     }
 
     async openWebPage() {
         await browser.url(url);
     }
 
-    getWebPageTitle() {
-        return browser.getTitle();
+    async getWebPageTitle() {
+        return  browser.getTitle();
     }
 
-    assertSearchResult(value: string) {
+    async assertSearchResult(value: string) {
+        const result = await $(`h2 > [href="#${value}"]`);
+        expect(await result.isExisting()).toEqual(true);
     }
 }

@@ -5,7 +5,7 @@ import {GooglePage} from "test/page_objects/factory_pattern/GooglePage";
 const webPageFactory = new WebPageFactory();
 
 describe('test web pages', () => {
-    it('webdriver io page should have the right title', () => {
+    it.skip('webdriver io page should have the right title', () => {
         let webdriverIoPage: WebdriverIOPage;
         webdriverIoPage = webPageFactory.getWebTestPage('webdriverIo');
         webdriverIoPage.openWebPage();
@@ -13,7 +13,7 @@ describe('test web pages', () => {
         expect(webdriverPageTitle).toBe("WebdriverIO · Next-gen browser and mobile automation test framework for Node.js");
     });
 
-    it('google page should have the right title', () => {
+    it.skip('google page should have the right title', () => {
         let googlePage: GooglePage;
         googlePage = webPageFactory.getWebTestPage('google')
         googlePage.openWebPage();
