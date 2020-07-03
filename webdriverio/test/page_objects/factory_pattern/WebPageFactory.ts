@@ -1,6 +1,6 @@
-import {WebdriverIOPage} from "test/page_objects/WebdriverIOPage";
-import {GooglePage} from "test/page_objects/GooglePage";
-import {WebPage} from "test/page_objects/WebPage";
+import {WebdriverIOPage} from "test/page_objects/factory_pattern/WebdriverIOPage";
+import {GooglePage} from "test/page_objects/factory_pattern/GooglePage";
+import {WebPage} from "test/page_objects/factory_pattern/WebPage";
 
 export class WebPageFactory {
 

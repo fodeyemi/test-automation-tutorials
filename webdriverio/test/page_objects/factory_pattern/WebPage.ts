@@ -1,5 +1,7 @@
 export interface WebPage {
 
+    searchBox;
+
     openWebPage();
 
     searchForSomething(searchItem: string);
