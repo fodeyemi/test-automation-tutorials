@@ -15,6 +15,6 @@ export class WebdriverIOPage implements WebPage {
         return browser.getTitle();
     }
 
-    assertSearchResult() {
+    assertSearchResult(value: string) {
     }
 }

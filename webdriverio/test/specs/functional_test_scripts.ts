@@ -9,7 +9,7 @@ describe('functional testing', () => {
         googlePage = webPageFactory.getWebTestPage('google')
         await googlePage.openWebPage();
         await googlePage.searchForSomething('Football');
-        googlePage.assertSearchResult()
+        await googlePage.assertSearchResult("Football - BBC Sport")
     });
 
 })

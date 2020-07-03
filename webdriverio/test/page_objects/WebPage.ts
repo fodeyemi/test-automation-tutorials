@@ -6,5 +6,5 @@ export interface WebPage {
 
     getWebPageTitle();
 
-    assertSearchResult();
+    assertSearchResult(value: string);
 }
