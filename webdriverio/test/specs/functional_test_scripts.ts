@@ -1,12 +1,11 @@
 import {WebPageFactory} from "test/page_objects/factory_pattern/WebPageFactory";
-import {GooglePage} from "test/page_objects/factory_pattern/GooglePage";
-import {WebdriverIOPage} from "test/page_objects/factory_pattern/WebdriverIOPage";
+import {WebPage} from "test/page_objects/factory_pattern/WebPage";
 
 const webPageFactory = new WebPageFactory();
 
 describe('functional testing', () => {
     it.skip('Google should return results', async () => {
-        let googlePage: GooglePage;
+        let googlePage: WebPage;
         googlePage = webPageFactory.getWebTestPage('google')
         await googlePage.openWebPage();
         await googlePage.searchForSomething('Football');
@@ -14,7 +13,7 @@ describe('functional testing', () => {
     });
 
     it.skip('Webdriver IO should return results', async () => {
-        let webdriverIOPage: WebdriverIOPage;
+        let webdriverIOPage: WebPage;
         webdriverIOPage = webPageFactory.getWebTestPage('webdriverIo');
         await webdriverIOPage.openWebPage();
         await webdriverIOPage.searchForSomething('click');
@@ -22,7 +21,7 @@ describe('functional testing', () => {
     });
 
     it('should return result using the lucky button', async () => {
-        let googlePage: GooglePage;
+        let googlePage: WebPage;
         googlePage = webPageFactory.getWebTestPage('google')
         await googlePage.openWebPage();
         await googlePage.searchUsingLuckyButton('Football')

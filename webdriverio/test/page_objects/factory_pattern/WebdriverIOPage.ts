@@ -19,7 +19,7 @@ export class WebdriverIOPage implements WebPage {
     }
 
     async getWebPageTitle() {
-        return  browser.getTitle();
+        return browser.getTitle();
     }
 
     async assertSearchResult(value: string) {

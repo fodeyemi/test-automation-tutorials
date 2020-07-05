@@ -2,7 +2,7 @@ export interface WebPage {
 
     readonly searchBox;
 
-    luckyButton?: any;
+    readonly luckyButton?: any;
 
     openWebPage();
 

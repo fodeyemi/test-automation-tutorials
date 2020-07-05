@@ -22,9 +22,9 @@ export class GooglePage implements WebPage {
         this.searchBox = await $('[name="q"]');
         await this.searchBox.waitForExist();
         await this.searchBox.addValue(searchItem);
-        const divElem = await $$('.UUbT9 center input');
-        await divElem[1].waitForEnabled();
-        await divElem[1].click();
+        this.luckyButton = await $$('.UUbT9 center input');
+        await this.luckyButton[1].waitForEnabled();
+        await this.luckyButton[1].click();
     }
 
     getWebPageTitle() {

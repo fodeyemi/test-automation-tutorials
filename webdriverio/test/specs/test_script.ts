@@ -1,12 +1,11 @@
 import {WebPageFactory} from "test/page_objects/factory_pattern/WebPageFactory";
-import {WebdriverIOPage} from "test/page_objects/factory_pattern/WebdriverIOPage";
-import {GooglePage} from "test/page_objects/factory_pattern/GooglePage";
+import {WebPage} from "test/page_objects/factory_pattern/WebPage";
 
 const webPageFactory = new WebPageFactory();
 
 describe('test web pages', () => {
     it.skip('webdriver io page should have the right title', () => {
-        let webdriverIoPage: WebdriverIOPage;
+        let webdriverIoPage: WebPage;
         webdriverIoPage = webPageFactory.getWebTestPage('webdriverIo');
         webdriverIoPage.openWebPage();
         const webdriverPageTitle = webdriverIoPage.getWebPageTitle();
@@ -14,7 +13,7 @@ describe('test web pages', () => {
     });
 
     it.skip('google page should have the right title', () => {
-        let googlePage: GooglePage;
+        let googlePage: WebPage;
         googlePage = webPageFactory.getWebTestPage('google')
         googlePage.openWebPage();
         const googlePageTitle = googlePage.getWebPageTitle();
