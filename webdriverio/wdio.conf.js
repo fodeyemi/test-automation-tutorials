@@ -145,7 +145,9 @@ exports.config = {
                 require('ts-node').register({files: true})
             }
         ],
-        require: ['./test/cucumber/step_definitions/*.steps.ts']
+        require: ['./test/cucumber/step_definitions/*.steps.ts'],
+        tagsInTitle: true,
+        tagExpression: "@run"
     },
 
     //

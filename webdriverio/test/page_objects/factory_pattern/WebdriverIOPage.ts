@@ -16,6 +16,7 @@ export class WebdriverIOPage implements WebPage {
 
     async openWebPage() {
         await browser.url(url);
+        await browser.pause(1000);
     }
 
     async getWebPageTitle() {
@@ -23,6 +24,7 @@ export class WebdriverIOPage implements WebPage {
     }
 
     async assertSearchResult(value: string) {
+        console.log('webdriver io page!!!!');
         const result = await $(`h2 > [href="#${value}"]`);
         expect(await result.isExisting()).toEqual(true);
     }
