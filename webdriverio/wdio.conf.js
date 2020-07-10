@@ -17,7 +17,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/**/*.ts'
+        './test/cucumber/features/**/*.feature'
     ],
     // Patterns to exclude.
     exclude: [
@@ -113,7 +113,7 @@ exports.config = {
     //
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
-    framework: 'mocha',
+    framework: 'cucumber',
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
@@ -136,6 +136,18 @@ exports.config = {
         require: 'ts-node/register',
         compilers: ['tsconfig-paths/register']
     },
+
+    //
+    // Options to be passed to Cucumber.
+    cucumberOpts: {
+        requireModule: [
+            'tsconfig-paths/register', () => {
+                require('ts-node').register({files: true})
+            }
+        ],
+        require: ['./test/cucumber/step_definitions/*.steps.ts']
+    },
+
     //
     // =====
     // Hooks
@@ -177,7 +189,8 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // before: function (capabilities, specs) {
+    // before: (capabilities, specs) => {
+    //     require('ts-node').register({files: true})
     // },
     /**
      * Runs before a WebdriverIO command gets executed.

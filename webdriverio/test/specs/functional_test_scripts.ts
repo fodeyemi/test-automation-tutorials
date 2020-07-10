@@ -4,7 +4,7 @@ import {WebPage} from "test/page_objects/factory_pattern/WebPage";
 const webPageFactory = new WebPageFactory();
 
 describe('functional testing', () => {
-    it.skip('Google should return results', async () => {
+    it('Google should return results', async () => {
         let googlePage: WebPage;
         googlePage = webPageFactory.getWebTestPage('google')
         await googlePage.openWebPage();
@@ -12,7 +12,7 @@ describe('functional testing', () => {
         await googlePage.assertSearchResult("Football - BBC Sport")
     });
 
-    it.skip('Webdriver IO should return results', async () => {
+    it('Webdriver IO should return results', async () => {
         let webdriverIOPage: WebPage;
         webdriverIOPage = webPageFactory.getWebTestPage('webdriverIo');
         await webdriverIOPage.openWebPage();
