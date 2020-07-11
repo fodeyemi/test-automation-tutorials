@@ -238,5 +238,7 @@ typings/
 
 # manual entries
 .idea/
+*.iml
+*.deb
 
 # End of https://www.toptal.com/developers/gitignore/api/node,jetbrains,eclipse
