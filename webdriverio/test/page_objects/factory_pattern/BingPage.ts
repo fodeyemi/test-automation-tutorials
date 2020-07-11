@@ -1,11 +1,10 @@
 import {WebPage} from "test/page_objects/factory_pattern/WebPage";
 
-const url = 'https://www.google.co.uk/'
+const url = 'https://www.bing.com/'
 
-export class GooglePage implements WebPage {
+export class BingPage implements WebPage {
 
     searchBox: any;
-    luckyButton?: any;
 
     async openWebPage() {
         await browser.url(url);
@@ -16,16 +15,8 @@ export class GooglePage implements WebPage {
         this.searchBox = await $('[name="q"]');
         await this.searchBox.waitForExist();
         await this.searchBox.addValue(searchItem);
+        await browser.pause(500);
         await browser.keys('Enter');
-    }
-
-    async searchUsingLuckyButton?(searchItem: string) {
-        this.searchBox = await $('[name="q"]');
-        await this.searchBox.waitForExist();
-        await this.searchBox.addValue(searchItem);
-        this.luckyButton = await $$('.UUbT9 center input');
-        await this.luckyButton[1].waitForEnabled();
-        await this.luckyButton[1].click();
     }
 
     getWebPageTitle() {
@@ -33,7 +24,8 @@ export class GooglePage implements WebPage {
     }
 
     async assertSearchResult(value: string) {
-        const result = await $(`h3=${value}`);
+        const result = await $(`a=${value}`);
         expect(await result.isDisplayed()).toEqual(true);
     }
+
 }
