@@ -1,7 +1,6 @@
 @run
 Feature: Web testing
 
-  @skip()
   Scenario Outline: Web pages should open with the right title
     Given I open "<web_page>" page
     Then it should have "<expected_title>" as page title
@@ -9,6 +8,8 @@ Feature: Web testing
       | web_page    | expected_title                                                                  |
       | google      | Google                                                                          |
       | webdriverIo | WebdriverIO · Next-gen browser and mobile automation test framework for Node.js |
+      # add new page object that navigates to https://www.bing.com/ to make test pass
+      | bing        | Bing                                                                            |
 
   @skip()
   Scenario Outline: Display search results
@@ -21,6 +22,7 @@ Feature: Web testing
       | webdriverIo | click        | elementclick         |
 
 
+  @skip()
   Scenario: Get to BBC page from google using lucky button
     Given I open "google" page
     When I search for "Football" using the lucky button
