@@ -29,4 +29,12 @@ describe('functional testing', () => {
         expect(title).toEqual('Football - BBC Sport');
     });
 
-})
+    it('Bing should return results', async () => {
+        let bingPage: WebPage;
+        bingPage = webPageFactory.getWebTestPage('bing')
+        await bingPage.openWebPage();
+        await bingPage.searchForSomething('Arsenal');
+        await bingPage.assertSearchResult("Arsenal.com - Homepage")
+    });
+
+});
