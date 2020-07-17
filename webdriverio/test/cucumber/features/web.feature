@@ -8,7 +8,6 @@ Feature: Web testing
       | web_page    | expected_title                                                                  |
       | google      | Google                                                                          |
       | webdriverIo | WebdriverIO · Next-gen browser and mobile automation test framework for Node.js |
-      # add new page object that navigates to https://www.bing.com/ to make test pass
       | bing        | Bing                                                                            |
 
   @skip()
