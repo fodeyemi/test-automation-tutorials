@@ -238,5 +238,6 @@ typings/
 
 # manual entries
 .idea/
+webdriverio/allure-report/*
 
 # End of https://www.toptal.com/developers/gitignore/api/node,jetbrains,eclipse
