@@ -7,7 +7,8 @@ export class BingPage implements WebPage {
     searchBox: any;
 
     async openWebPage() {
-        await browser.url(url)
+        await browser.url(url);
+        await browser.pause(100);
     }
 
     async searchForSomething(searchItem: string) {
@@ -22,11 +23,8 @@ export class BingPage implements WebPage {
     }
 
     async assertSearchResult(value: string) {
-        console.log('bing page !!!!');
         const result = await $(`h2 > [href="#${value}"]`);
         expect(await result.isExisting()).toEqual(true);
-
-
     }
 
 }

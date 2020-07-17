@@ -8,7 +8,8 @@ export class GooglePage implements WebPage {
     luckyButton?: any;
 
     async openWebPage() {
-        await browser.url(url)
+        await browser.url(url);
+        await browser.pause(100);
     }
 
     async searchForSomething(searchItem: string) {
@@ -32,7 +33,6 @@ export class GooglePage implements WebPage {
     }
 
     async assertSearchResult(value: string) {
-        console.log('google page!!!!');
         const result = await $(`h3=${value}`);
         expect(await result.isDisplayed()).toEqual(true);
     }

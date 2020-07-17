@@ -1,6 +1,7 @@
 @run
 Feature: Web testing
 
+  @skip()
   Scenario Outline: Web pages should open with the right title
     Given I open "<web_page>" page
     Then it should have "<expected_title>" as page title
@@ -10,15 +11,16 @@ Feature: Web testing
       | webdriverIo | WebdriverIO · Next-gen browser and mobile automation test framework for Node.js |
       | bing        | Bing                                                                            |
 
-  @skip()
   Scenario Outline: Display search results
     Given I open "<web_page>" page
     When I search for "<search_param>"
     Then the "<search_result>" should be displayed
     Examples:
-      | web_page    | search_param | search_result        |
-      | google      | Football     | Football - BBC Sport |
-      | webdriverIo | click        | elementclick         |
+      | web_page    | search_param | search_result          |
+      | google      | Football     | Football - BBC Sport   |
+      | webdriverIo | click        | elementclick           |
+      # make test pass - you will need to update the css selector in the assertSearchResult implementation in BingPage
+      | bing        | Arsenal      | Arsenal.com - Homepage |
 
 
   @skip()
