@@ -24,6 +24,7 @@ export class GooglePage implements WebPage {
         await this.searchBox.waitForExist();
         await this.searchBox.addValue(searchItem);
         this.luckyButton = await $$('.UUbT9 center input');
+        await browser.pause(500);
         await this.luckyButton[1].waitForEnabled();
         await this.luckyButton[1].click();
     }
