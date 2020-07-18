@@ -16,7 +16,7 @@ export class WebdriverIOPage implements WebPage {
 
     async openWebPage() {
         await browser.url(url);
-        await browser.pause(1000);
+        await browser.pause(100);
     }
 
     async getWebPageTitle() {

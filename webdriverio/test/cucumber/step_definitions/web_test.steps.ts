@@ -6,7 +6,7 @@ const webPageFactory = new WebPageFactory();
 let webPage: WebPage;
 
 Given(/^I open "([^"]*)" page$/, async (page: string) => {
-    webPage = await webPageFactory.getWebTestPage(page)
+    webPage = await webPageFactory.getWebTestPage(page);
     await webPage.openWebPage();
 });
 
@@ -20,11 +20,11 @@ When(/^I search for "([^"]*)"$/, async (searchParam: string) => {
 });
 
 Then(/^the "([^"]*)" should be displayed$/, async (searchResult: string) => {
-    await webPage.assertSearchResult(searchResult)
+    await webPage.assertSearchResult(searchResult);
 });
 
 When(/^I search for "([^"]*)" using the lucky button$/, async (searchParam: string) => {
-    await webPage.searchUsingLuckyButton(searchParam)
+    await webPage.searchUsingLuckyButton(searchParam);
 });
 
 Then(/^I should be navigated to the BBC website$/, async (table: TableDefinition) => {
