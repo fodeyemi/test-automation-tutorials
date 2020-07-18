@@ -17,6 +17,30 @@
 * Run _npm test_ to execute test
 * If test runs project has been successfully set up
 
+## Allure Framework
+#### Mac OS
+`brew install allure`
+#### Linux
+`sudo apt-add-repository ppa:qameta/allure`
+
+`sudo apt-get update`
+
+`sudo apt-get install allure-commandline`
+#### Windows
+For Windows, Allure is available from the [Scoop](https://scoop.sh/) commandline-installer.
+
+To install Allure, download and install Scoop and then execute in the Powershell:
+
+`scoop install allure`
+
+Also Scoop is capable of updating Allure distribution installations. To do so navigate to the Scoop installation directory and execute
+
+`\bin\checkver.ps1 allure -u`
+
+This will check for newer versions of Allure, and update the manifest file. Then execute
+
+`scoop update allure`
+
 ## Useful links
 * [Design Patterns](https://www.tutorialspoint.com/design_pattern/index.htm)
 * [WebdriverIO](https://webdriver.io/docs/gettingstarted.html)
@@ -28,3 +52,4 @@
 * [Docker](https://docs.docker.com/)
 * [Jenkins](https://www.jenkins.io/doc/)
 * [CSS selector cheat sheet](https://www.freecodecamp.org/news/css-selectors-cheat-sheet/)
+

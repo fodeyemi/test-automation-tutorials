@@ -32,7 +32,6 @@ export class GooglePage implements WebPage {
     }
 
     async assertSearchResult(value: string) {
-        console.log('google page!!!!');
         const result = await $(`h3=${value}`);
         expect(await result.isDisplayed()).toEqual(true);
     }

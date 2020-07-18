@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1595095652258' stop='1595095653573'>
+    <name>@run: Web testing</name>
+    <title>@run: Web testing</title>
+    <test-cases>
+        <test-case start='1595095652261' status='broken' stop='1595095653571'>
+            <name>@run: Get to BBC page from google using lucky button</name>
+            <title>@run: Get to BBC page from google using lucky button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1595095652263' status='passed' stop='1595095653369'>
+                    <name>Given I open "google" page</name>
+                    <title>Given I open "google" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1595095653369' status='broken' stop='1595095653571'>
+                    <name>When I search for "Football" using the lucky button</name>
+                    <title>When I search for "Football" using the lucky button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1595095653571' status='canceled' stop='1595095653571'>
+                    <name>Then I should be navigated to the BBC website</name>
+                    <title>Then I should be navigated to the BBC website</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>element not interactable
+                  (Session info: chrome=83.0.4103.116)</message>
+                <stack-trace>element not interactable: element not interactable
+                  (Session info: chrome=83.0.4103.116)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

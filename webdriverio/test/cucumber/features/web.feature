@@ -1,7 +1,6 @@
 @run
 Feature: Web testing
 
-  @skip()
   Scenario Outline: Web pages should open with the right title
     Given I open "<web_page>" page
     Then it should have "<expected_title>" as page title
@@ -10,7 +9,6 @@ Feature: Web testing
       | google      | Google                                                                          |
       | webdriverIo | WebdriverIO · Next-gen browser and mobile automation test framework for Node.js |
 
-  @skip()
   Scenario Outline: Display search results
     Given I open "<web_page>" page
     When I search for "<search_param>"

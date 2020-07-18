@@ -1,0 +1,40 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1595095662131' stop='1595095665447'>
+    <name>@run: Web testing</name>
+    <title>@run: Web testing</title>
+    <test-cases>
+        <test-case start='1595095662134' status='passed' stop='1595095665447'>
+            <name>@run: Get to BBC page from google using lucky button</name>
+            <title>@run: Get to BBC page from google using lucky button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1595095662136' status='passed' stop='1595095662606'>
+                    <name>Given I open "google" page</name>
+                    <title>Given I open "google" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1595095662607' status='passed' stop='1595095665436'>
+                    <name>When I search for "Football" using the lucky button</name>
+                    <title>When I search for "Football" using the lucky button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1595095665436' status='passed' stop='1595095665445'>
+                    <name>Then I should be navigated to the BBC website</name>
+                    <title>Then I should be navigated to the BBC website</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
