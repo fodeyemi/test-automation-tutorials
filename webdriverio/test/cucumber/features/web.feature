@@ -25,7 +25,6 @@ Feature: Web testing
 
   @skip()
   Scenario: Get to BBC page from google using lucky button
-=======
       | bing        | Arsenal      | Arsenal.com - Homepage |
 
   Scenario Outline: Get to BBC page from google using lucky button
