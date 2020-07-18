@@ -24,7 +24,7 @@ export class BingPage implements WebPage {
     }
 
     async assertSearchResult(value: string) {
-        const result = await $('//a[contains(text(), "Arsenal.com - Homepage")]');
+        const result = await $(`a=${value}`);
         expect(await result.isDisplayed()).toEqual(true);
     }
 
