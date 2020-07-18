@@ -19,7 +19,6 @@ Feature: Web testing
       | web_page    | search_param | search_result          |
       | google      | Football     | Football - BBC Sport   |
       | webdriverIo | click        | elementclick           |
-<<<<<<< HEAD
       # make test pass - you will need to update the css selector in the assertSearchResult implementation in BingPage
       | bing        | Arsenal      | Arsenal.com - Homepage |
 
@@ -30,7 +29,6 @@ Feature: Web testing
       | bing        | Arsenal      | Arsenal.com - Homepage |
 
   Scenario Outline: Get to BBC page from google using lucky button
->>>>>>> 345cf21d006e4b1938f9083d993b9c23f0cf62fe
     Given I open "google" page
     When I search for "<search_param>" using the lucky button
     Then I should be navigated to the BBC website
