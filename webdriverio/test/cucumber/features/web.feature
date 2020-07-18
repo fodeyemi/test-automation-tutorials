@@ -11,6 +11,7 @@ Feature: Web testing
       | webdriverIo | WebdriverIO · Next-gen browser and mobile automation test framework for Node.js |
       | bing        | Bing                                                                            |
 
+  @skip()
   Scenario Outline: Display search results
     Given I open "<web_page>" page
     When I search for "<search_param>"
@@ -19,14 +20,16 @@ Feature: Web testing
       | web_page    | search_param | search_result          |
       | google      | Football     | Football - BBC Sport   |
       | webdriverIo | click        | elementclick           |
-      # make test pass - you will need to update the css selector in the assertSearchResult implementation in BingPage
       | bing        | Arsenal      | Arsenal.com - Homepage |
 
-
-  @skip()
-  Scenario: Get to BBC page from google using lucky button
+  Scenario Outline: Get to BBC page from google using lucky button
     Given I open "google" page
-    When I search for "Football" using the lucky button
+    When I search for "<search_param>" using the lucky button
     Then I should be navigated to the BBC website
-      | expected_title       |
-      | Football - BBC Sport |
+      | expected_title   |
+      | <expected_title> |
+    Examples:
+      | search_param | expected_title       |
+      | Football     | Football - BBC Sport |
+      | news         | Home - BBC News      |
+      | health       | Health A to Z - NHS  |
