@@ -19,14 +19,25 @@ Feature: Web testing
       | web_page    | search_param | search_result          |
       | google      | Football     | Football - BBC Sport   |
       | webdriverIo | click        | elementclick           |
+<<<<<<< HEAD
       # make test pass - you will need to update the css selector in the assertSearchResult implementation in BingPage
       | bing        | Arsenal      | Arsenal.com - Homepage |
 
 
   @skip()
   Scenario: Get to BBC page from google using lucky button
+=======
+      | bing        | Arsenal      | Arsenal.com - Homepage |
+
+  Scenario Outline: Get to BBC page from google using lucky button
+>>>>>>> 345cf21d006e4b1938f9083d993b9c23f0cf62fe
     Given I open "google" page
-    When I search for "Football" using the lucky button
+    When I search for "<search_param>" using the lucky button
     Then I should be navigated to the BBC website
-      | expected_title       |
-      | Football - BBC Sport |
+      | expected_title   |
+      | <expected_title> |
+    Examples:
+      | search_param | expected_title       |
+      | Football     | Football - BBC Sport |
+      | news         | Home - BBC News      |
+      | health       | Health A to Z - NHS  |

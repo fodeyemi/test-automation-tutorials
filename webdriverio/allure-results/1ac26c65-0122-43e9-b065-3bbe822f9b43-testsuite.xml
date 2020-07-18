@@ -1,0 +1,160 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1595095785131' stop='1595095796099'>
+    <name>@run: Web testing</name>
+    <title>@run: Web testing</title>
+    <test-cases>
+        <test-case start='1595095785134' status='passed' stop='1595095785609'>
+            <name>@run: Web pages should open with the right title</name>
+            <title>@run: Web pages should open with the right title</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1595095785136' status='passed' stop='1595095785600'>
+                    <name>Given I open "google" page</name>
+                    <title>Given I open "google" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1595095785601' status='passed' stop='1595095785608'>
+                    <name>Then it should have "Google" as page title</name>
+                    <title>Then it should have "Google" as page title</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1595095785609' status='passed' stop='1595095788132'>
+            <name>@run: Web pages should open with the right title</name>
+            <title>@run: Web pages should open with the right title</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1595095785610' status='passed' stop='1595095787922'>
+                    <name>Given I open "webdriverIo" page</name>
+                    <title>Given I open "webdriverIo" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1595095787922' status='passed' stop='1595095788132'>
+                    <name>Then it should have "WebdriverIO · Next-gen browser and mobile automation test framework for Node.js" as page title</name>
+                    <title>Then it should have "WebdriverIO · Next-gen browser and mobile automation test framework for Node.js" as page title</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1595095788133' status='passed' stop='1595095790223'>
+            <name>@run: Display search results</name>
+            <title>@run: Display search results</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1595095788133' status='passed' stop='1595095789127'>
+                    <name>Given I open "google" page</name>
+                    <title>Given I open "google" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1595095789127' status='passed' stop='1595095790193'>
+                    <name>When I search for "Football"</name>
+                    <title>When I search for "Football"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1595095790193' status='passed' stop='1595095790222'>
+                    <name>Then the "Football - BBC Sport" should be displayed</name>
+                    <title>Then the "Football - BBC Sport" should be displayed</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1595095790223' status='passed' stop='1595095792372'>
+            <name>@run: Display search results</name>
+            <title>@run: Display search results</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1595095790224' status='passed' stop='1595095791491'>
+                    <name>Given I open "webdriverIo" page</name>
+                    <title>Given I open "webdriverIo" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1595095791491' status='passed' stop='1595095792343'>
+                    <name>When I search for "click"</name>
+                    <title>When I search for "click"</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1595095792343' status='passed' stop='1595095792371'>
+                    <name>Then the "elementclick" should be displayed</name>
+                    <title>Then the "elementclick" should be displayed</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1595095792373' status='passed' stop='1595095796098'>
+            <name>@run: Get to BBC page from google using lucky button</name>
+            <title>@run: Get to BBC page from google using lucky button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome'/>
+            </parameters>
+            <steps>
+                <step start='1595095792373' status='passed' stop='1595095792722'>
+                    <name>Given I open "google" page</name>
+                    <title>Given I open "google" page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1595095792722' status='passed' stop='1595095796083'>
+                    <name>When I search for "Football" using the lucky button</name>
+                    <title>When I search for "Football" using the lucky button</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1595095796083' status='passed' stop='1595095796098'>
+                    <name>Then I should be navigated to the BBC website</name>
+                    <title>Then I should be navigated to the BBC website</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
