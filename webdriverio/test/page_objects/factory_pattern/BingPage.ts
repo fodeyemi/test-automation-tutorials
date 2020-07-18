@@ -15,6 +15,7 @@ export class BingPage implements WebPage {
         this.searchBox = await $('[name="q"]');
         await this.searchBox.waitForExist();
         await this.searchBox.addValue(searchItem);
+        await browser.pause(500);
         await browser.keys('Enter');
     }
 
@@ -23,8 +24,8 @@ export class BingPage implements WebPage {
     }
 
     async assertSearchResult(value: string) {
-        const result = await $(`h2 > [href="#${value}"]`);
-        expect(await result.isExisting()).toEqual(true);
+        const result = await $('//a[contains(text(), "Arsenal.com - Homepage")]');
+        expect(await result.isDisplayed()).toEqual(true);
     }
 
 }
