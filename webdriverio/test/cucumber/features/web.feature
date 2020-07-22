@@ -1,7 +1,6 @@
 @run
 Feature: Web testing
-
-  @skip()
+  
   Scenario Outline: Web pages should open with the right title
     Given I open "<web_page>" page
     Then it should have "<expected_title>" as page title
@@ -19,12 +18,6 @@ Feature: Web testing
       | web_page    | search_param | search_result          |
       | google      | Football     | Football - BBC Sport   |
       | webdriverIo | click        | elementclick           |
-      # make test pass - you will need to update the css selector in the assertSearchResult implementation in BingPage
-      | bing        | Arsenal      | Arsenal.com - Homepage |
-
-
-  @skip()
-  Scenario: Get to BBC page from google using lucky button
       | bing        | Arsenal      | Arsenal.com - Homepage |
 
   Scenario Outline: Get to web page from google using lucky button
