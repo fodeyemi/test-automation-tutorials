@@ -11,7 +11,6 @@ Feature: Web testing
       | webdriverIo | WebdriverIO · Next-gen browser and mobile automation test framework for Node.js |
       | bing        | Bing                                                                            |
 
-  @skip()
   Scenario Outline: Display search results
     Given I open "<web_page>" page
     When I search for "<search_param>"
@@ -22,10 +21,10 @@ Feature: Web testing
       | webdriverIo | click        | elementclick           |
       | bing        | Arsenal      | Arsenal.com - Homepage |
 
-  Scenario Outline: Get to BBC page from google using lucky button
+  Scenario Outline: Get to web page from google using lucky button
     Given I open "google" page
     When I search for "<search_param>" using the lucky button
-    Then I should be navigated to the BBC website
+    Then I should be navigated to the expected website
       | expected_title   |
       | <expected_title> |
     Examples:

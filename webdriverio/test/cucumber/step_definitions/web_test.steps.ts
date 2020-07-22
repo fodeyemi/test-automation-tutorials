@@ -27,7 +27,7 @@ When(/^I search for "([^"]*)" using the lucky button$/, async (searchParam: stri
     await webPage.searchUsingLuckyButton(searchParam);
 });
 
-Then(/^I should be navigated to the BBC website$/, async (table: TableDefinition) => {
+Then(/^I should be navigated to the expected website$/, async (table: TableDefinition) => {
     const title = await webPage.getWebPageTitle();
     const hashes = table.hashes();
     hashes.forEach((row) => {
