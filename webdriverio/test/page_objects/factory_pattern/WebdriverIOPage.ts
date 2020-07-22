@@ -5,6 +5,7 @@ const url = 'https://webdriver.io/'
 export class WebdriverIOPage implements WebPage {
 
     searchBox;
+    navigationLinks;
 
     async searchForSomething(searchItem: string) {
         this.searchBox = await $('#search_input_react');
@@ -26,5 +27,10 @@ export class WebdriverIOPage implements WebPage {
     async assertSearchResult(value: string) {
         const result = await $(`h2 > [href="#${value}"]`);
         expect(await result.isExisting()).toEqual(true);
+    }
+
+    async clickOnWebElement(value: string) {
+        const element = await browser.$(`a=${value}`);
+        await element.click();
     }
 }

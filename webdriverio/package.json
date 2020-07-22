@@ -1,7 +1,7 @@
 {
   "name": "webdriverio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Test Automation Framework - Webdriver IO",
   "main": "index.js",
   "scripts": {
     "test": "npx wdio wdio.conf.js",
