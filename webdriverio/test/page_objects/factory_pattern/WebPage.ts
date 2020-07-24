@@ -2,7 +2,9 @@ export interface WebPage {
 
     readonly searchBox;
 
-    readonly luckyButton?: any;
+    readonly luckyButton?;
+
+    readonly navigationLinks?;
 
     openWebPage();
 
@@ -13,4 +15,8 @@ export interface WebPage {
     getWebPageTitle();
 
     assertSearchResult(value: string);
+
+    clickOnWebElement?(value: string);
+
+    clickOnWebElements?();
 }

@@ -35,10 +35,17 @@ Feature: Web testing
       | news         | Home - BBC News      |
       | health       | Health A to Z - NHS  |
 
+  @skip()
   Scenario: Navigate Webdriver IO page
     Given I open "webdriverIo" page
-    # task - navigate to the the TypeScript Setup via Docs from webdriver io home page
     When I navigate to "TypeScript Setup" page via "Docs"
     Then I should be navigated to the expected website
       | expected_title                 |
       | TypeScript Setup · WebdriverIO |
+
+  Scenario: Click on all links on webdriver io page
+    Given I open "webdriverIo" page
+    When I should be able to click on all navigation menu links
+#    Then I should be navigated to the expected website
+#      | expected_title                                                                             |
+#      | webdriverio/webdriverio: Next-gen browser and mobile automation test framework for Node.js |

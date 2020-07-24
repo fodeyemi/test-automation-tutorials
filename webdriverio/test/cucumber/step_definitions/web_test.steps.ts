@@ -34,10 +34,11 @@ Then(/^I should be navigated to the expected website$/, async (table: TableDefin
         expect(title).toEqual(row.expected_title);
     });
 });
-When(/^I navigate to "([^"]*)" page via "([^"]*)"$/, async (value: string) => {
-    const links = $(`a=${value}`);
-    links.forEach((link) => {
-        link.click(value);
-        expect (link).toEqual(value);
+When(/^I navigate to "([^"]*)" page via "([^"]*)"$/, async (typeScriptPageLink: string, docLink: string) => {
+    await webPage.clickOnWebElement(docLink);
+    await webPage.clickOnWebElement(typeScriptPageLink);
+});
 
+Then(/^I should be able to click on all navigation menu links$/, async () => {
+    await webPage.clickOnWebElements()
 });
