@@ -51,5 +51,5 @@ This will check for newer versions of Allure, and update the manifest file. Then
 * [Git](https://git-scm.com/docs)
 * [Docker](https://docs.docker.com/)
 * [Jenkins](https://www.jenkins.io/doc/)
-* [CSS selector cheat sheet](https://www.freecodecamp.org/news/css-selectors-cheat-sheet/)
+* [CSS Reference](https://www.w3schools.com/cssref/css_selectors.asp)
 
