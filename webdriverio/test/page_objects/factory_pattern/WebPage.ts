@@ -17,6 +17,4 @@ export interface WebPage {
     assertSearchResult(value: string);
 
     clickOnWebElement?(value: string);
-
-    clickOnWebElements?();
 }

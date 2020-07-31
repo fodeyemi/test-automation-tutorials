@@ -29,15 +29,8 @@ export class WebdriverIOPage implements WebPage {
         expect(await result.isExisting()).toEqual(true);
     }
 
-    async clickOnWebElement?(value: string) {
+    async clickOnWebElement(value: string) {
         const element = await browser.$(`a=${value}`);
         await element.click();
-    }
-
-    async clickOnWebElements() {
-        this.navigationLinks = await $$('.nav-site.nav-site-internal li');
-        await this.navigationLinks.forEach((link) => {
-            link.click();
-        });
     }
 }
