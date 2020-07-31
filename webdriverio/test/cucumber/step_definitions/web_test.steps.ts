@@ -34,6 +34,7 @@ Then(/^Bob should be navigated to the expected website$/, async (table: TableDef
         expect(title).toEqual(row.expected_title);
     });
 });
+
 When(/^Bob navigates to "([^"]*)" page via "([^"]*)"$/, async (typeScriptPageLink: string, docLink: string) => {
     await webPage.clickOnWebElement(docLink);
     await webPage.clickOnWebElement(typeScriptPageLink);

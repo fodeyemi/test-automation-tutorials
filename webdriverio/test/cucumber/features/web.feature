@@ -45,15 +45,12 @@ Feature: Web testing
 
   Scenario: Click on all links on webdriver io page
     Given Bob opens "webdriverIo" page
-    When Bob clicks on all navigation menu links
-      | links      |
-      | Docs       |
-      | API        |
-      | Help       |
-      | Versions   |
-      | Blog       |
-      | Contribute |
-      | GitHub     |
-    Then Bob should be navigated to the expected website
-      | expected_title                                                                                      |
-      | GitHub - webdriverio/webdriverio: Next-gen browser and mobile automation test framework for Node.js |
+    Then Bob should be able to click on all navigation menu links
+      | links      | expected_title                                                                             |
+      | Docs       | Getting Started · WebdriverIO                                                              |
+      | API        | API Docs · WebdriverIO                                                                     |
+      | Help       | WebdriverIO · Next-gen browser and mobile automation test framework for Node.js            |
+      | Versions   | WebdriverIO Versions · WebdriverIO                                                         |
+      | Blog       | Blog · WebdriverIO                                                                         |
+      | Contribute | Contribute · WebdriverIO                                                                   |
+      | GitHub     | webdriverio/webdriverio: Next-gen browser and mobile automation test framework for Node.js |
