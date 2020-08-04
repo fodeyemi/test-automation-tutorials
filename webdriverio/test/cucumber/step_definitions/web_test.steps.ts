@@ -40,9 +40,17 @@ When(/^Bob navigates to "([^"]*)" page via "([^"]*)"$/, async (typeScriptPageLin
     await webPage.clickOnWebElement(typeScriptPageLink);
 });
 
-Then(/^Bob clicks on all navigation menu links$/, async (table: TableDefinition) => {
-    const hashes = table.hashes();
+
+Then(/^Bob should be able to click on all navigation menu links$/, async (table: TableDefinition) => {
+
+    const hashes = table.hashes()
     for (const hash of hashes) {
         await webPage.clickOnWebElement(hash.links);
+        await webPage.getWebPageTitles(hash.expected_title);
     }
+
+
+
+
+
 });

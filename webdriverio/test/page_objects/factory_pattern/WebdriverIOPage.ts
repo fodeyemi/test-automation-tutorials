@@ -33,4 +33,8 @@ export class WebdriverIOPage implements WebPage {
         const element = await browser.$(`a=${value}`);
         await element.click();
     }
+    async getWebPageTitles(value: string) {
+        return browser.getTitle();
+
+    }
 }
