@@ -242,5 +242,6 @@ typings/
 *.deb
 webdriverio/allure-report/*
 webdriverio/allure-results/**/*.xml
+webdriverio/allure-results/**/*.json
 
 # End of https://www.toptal.com/developers/gitignore/api/node,jetbrains,eclipse

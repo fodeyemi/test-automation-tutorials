@@ -43,6 +43,7 @@ Feature: Web testing
       | expected_title                 |
       | TypeScript Setup · WebdriverIO |
 
+  @skip()
   Scenario: Click on all links on webdriver io page
     Given Bob opens "webdriverIo" page
     Then Bob should be able to click on all navigation menu links
@@ -53,3 +54,9 @@ Feature: Web testing
       | Versions   | WebdriverIO Versions · WebdriverIO                                              |
       | Blog       | Blog · WebdriverIO                                                              |
       | Contribute | Contribute · WebdriverIO                                                        |
+
+  Scenario: Bob using google
+    Given Bob opens "google" page
+    When Bob navigates to "About" page
+    Then Bob should be able to scroll into "Follow us on:" section
+    And the "More about us" link should be displayed
