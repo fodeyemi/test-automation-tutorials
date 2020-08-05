@@ -40,17 +40,11 @@ When(/^Bob navigates to "([^"]*)" page via "([^"]*)"$/, async (typeScriptPageLin
     await webPage.clickOnWebElement(typeScriptPageLink);
 });
 
-
 Then(/^Bob should be able to click on all navigation menu links$/, async (table: TableDefinition) => {
-
-    const hashes = table.hashes()
+    const hashes = table.hashes();
     for (const hash of hashes) {
         await webPage.clickOnWebElement(hash.links);
-        await webPage.getWebPageTitles(hash.expected_title);
+        const actualTitle = await webPage.getWebPageTitle();
+        expect(actualTitle).toEqual(hash.expected_title);
     }
-
-
-
-
-
 });
