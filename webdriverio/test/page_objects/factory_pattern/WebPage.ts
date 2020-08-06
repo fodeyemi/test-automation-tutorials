@@ -18,9 +18,9 @@ export interface WebPage {
 
     clickOnWebElement?(value: string);
 
-    scrollToSectionLink?(value: string);
+    assertScrollToSectionLink?(value: string);
 
-    scrollToPageFooter?(value: string);
+    assertScrollToPageFooter?(value: string);
 
 
 

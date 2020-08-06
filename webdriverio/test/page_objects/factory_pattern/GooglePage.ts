@@ -45,7 +45,7 @@ export class GooglePage implements WebPage {
         await element.click();
     }
 
-    async scrollToSectionLink(value: string) {
+    async assertScrollToSectionLink(value: string) {
         const sectionLink = await $(`h2=${value}`);
         await sectionLink.scrollIntoView();
         expect(await sectionLink.isDisplayedInViewport()).toEqual(true);
@@ -54,7 +54,7 @@ export class GooglePage implements WebPage {
 
     }
 
-    async scrollToPageFooter(value: string) {
+    async assertScrollToPageFooter(value: string) {
         const pageFooter = await $(`h2=${value}`);
         await pageFooter.scrollIntoView();
         expect(await pageFooter.isDisplayedInViewport()).toEqual(true);

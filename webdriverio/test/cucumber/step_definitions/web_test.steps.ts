@@ -53,9 +53,9 @@ When(/^Bob navigates to "([^"]*)" page$/, async (aboutLink: string)=> {
 
 });
 Then(/^Bob should be able to scroll into "([^"]*)" section$/, async (followUsLink: string) => {
-    await webPage.scrollToSectionLink(followUsLink);
+    await webPage.assertScrollToSectionLink(followUsLink);
 
 });
 Then(/^the "([^"]*)" link should be displayed$/, async (moreAboutUsLink: string) => {
-    await webPage.scrollToPageFooter(moreAboutUsLink);
+    await webPage.assertScrollToPageFooter(moreAboutUsLink);
 });
