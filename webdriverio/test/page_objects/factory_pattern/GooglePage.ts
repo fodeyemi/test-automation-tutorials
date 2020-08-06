@@ -6,6 +6,8 @@ export class GooglePage implements WebPage {
 
     searchBox: any;
     luckyButton?: any;
+    sectionLink?: any;
+    pageFooter?: any;
 
     async openWebPage() {
         await browser.url(url);
@@ -36,5 +38,27 @@ export class GooglePage implements WebPage {
     async assertSearchResult(value: string) {
         const result = await $(`h3=${value}`);
         expect(await result.isDisplayed()).toEqual(true);
+    }
+
+    async clickOnWebElement(value: string) {
+        const element = await browser.$(`a=${value}`);
+        await element.click();
+    }
+
+    async scrollToSectionLink(value: string) {
+        const sectionLink = await $(`h2=${value}`);
+        await sectionLink.scrollIntoView();
+        expect(await sectionLink.isDisplayedInViewport()).toEqual(true);
+        await browser.pause(1000);
+
+
+    }
+
+    async scrollToPageFooter(value: string) {
+        const pageFooter = await $(`h2=${value}`);
+        await pageFooter.scrollIntoView();
+        expect(await pageFooter.isDisplayedInViewport()).toEqual(true);
+        await browser.pause(1000);
+
     }
 }

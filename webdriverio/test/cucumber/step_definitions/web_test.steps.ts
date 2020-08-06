@@ -48,3 +48,14 @@ Then(/^Bob should be able to click on all navigation menu links$/, async (table:
         expect(actualTitle).toEqual(hash.expected_title);
     }
 });
+When(/^Bob navigates to "([^"]*)" page$/, async (aboutLink: string)=> {
+    await webPage.clickOnWebElement(aboutLink);
+
+});
+Then(/^Bob should be able to scroll into "([^"]*)" section$/, async (followUsLink: string) => {
+    await webPage.scrollToSectionLink(followUsLink);
+
+});
+Then(/^the "([^"]*)" link should be displayed$/, async (moreAboutUsLink: string) => {
+    await webPage.scrollToPageFooter(moreAboutUsLink);
+});

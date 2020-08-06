@@ -18,5 +18,10 @@ export interface WebPage {
 
     clickOnWebElement?(value: string);
 
-    getWebPageTitles?(value: string);
+    scrollToSectionLink?(value: string);
+
+    scrollToPageFooter?(value: string);
+
+
+
 }
