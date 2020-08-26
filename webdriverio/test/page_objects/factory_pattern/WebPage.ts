@@ -1,20 +1,19 @@
 export interface WebPage {
+  readonly searchBox;
 
-    readonly searchBox;
+  readonly luckyButton?;
 
-    readonly luckyButton?;
+  readonly navigationLinks?;
 
-    readonly navigationLinks?;
+  openWebPage();
 
-    openWebPage();
+  searchUsingLuckyButton?(searchItem: string);
 
-    searchUsingLuckyButton?(searchItem: string);
+  searchForSomething(searchItem: string);
 
-    searchForSomething(searchItem: string);
+  getWebPageTitle();
 
-    getWebPageTitle();
+  assertSearchResult(value: string);
 
-    assertSearchResult(value: string);
-
-    clickOnWebElement?(value: string);
+  clickOnWebElement?(value: string);
 }

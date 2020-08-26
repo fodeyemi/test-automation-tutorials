@@ -3,12 +3,8 @@
     "target": "es5",
     "baseUrl": ".",
     "paths": {
-      "*": [
-        "./"
-      ],
-      "test/*": [
-        "./test/*"
-      ]
+      "*": ["./"],
+      "test/*": ["./test/*"]
     },
     "types": [
       "node",
@@ -18,8 +14,6 @@
       "@wdio/cucumber-framework"
     ]
   },
-  "include": [
-    "./test/**/*.ts"
-  ],
+  "include": ["./test/**/*.ts"],
   "exclude": ["node_modules"]
 }
