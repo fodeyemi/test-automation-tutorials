@@ -1,7 +1,6 @@
 @run
 Feature: Web testing
 
-  @skip()
   Scenario Outline: Web pages should open with the right title
     Given Bob opens "<web_page>" page
     Then it should have "<expected_title>" as page title
@@ -11,7 +10,6 @@ Feature: Web testing
       | webdriverIo | WebdriverIO · Next-gen browser and mobile automation test framework for Node.js |
       | bing        | Bing                                                                            |
 
-  @skip()
   Scenario Outline: Display search results
     Given Bob opens "<web_page>" page
     When Bob searches for "<search_param>"
@@ -22,7 +20,6 @@ Feature: Web testing
       | webdriverIo | click        | elementclick           |
       | bing        | Arsenal      | Arsenal.com - Homepage |
 
-  @skip()
   Scenario Outline: Get to web page from google using lucky button
     Given Bob opens "google" page
     When Bob searches for "<search_param>" using the lucky button
@@ -35,7 +32,6 @@ Feature: Web testing
       | news         | Home - BBC News      |
       | health       | Health A to Z - NHS  |
 
-  @skip()
   Scenario: Navigate Webdriver IO page
     Given Bob opens "webdriverIo" page
     When Bob navigates to "TypeScript Setup" page via "Docs"
@@ -43,6 +39,7 @@ Feature: Web testing
       | expected_title                 |
       | TypeScript Setup · WebdriverIO |
 
+  @skip()
   Scenario: Click on all links on webdriver io page
     Given Bob opens "webdriverIo" page
     Then Bob should be able to click on all navigation menu links

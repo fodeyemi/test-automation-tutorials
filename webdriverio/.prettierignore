@@ -240,7 +240,7 @@ typings/
 .idea/
 *.iml
 *.deb
-webdriverio/allure-report/*
-webdriverio/allure-results/*
+allure-report/*
+allure-results/*
 
 # End of https://www.toptal.com/developers/gitignore/api/node,jetbrains,eclipse
