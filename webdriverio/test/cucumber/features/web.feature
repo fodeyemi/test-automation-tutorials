@@ -6,7 +6,7 @@ Feature: Web testing
     Then it should have "<expected_title>" as page title
     Examples:
       | web_page    | expected_title                                                                  |
-      | google      | Google                                                                          |
+#      | google      | Google                                                                          |
       | webdriverIo | WebdriverIO · Next-gen browser and mobile automation test framework for Node.js |
       | bing        | Bing                                                                            |
 
@@ -16,10 +16,11 @@ Feature: Web testing
     Then the "<search_result>" should be displayed
     Examples:
       | web_page    | search_param | search_result          |
-      | google      | Football     | Football - BBC Sport   |
+#      | google      | Football     | Football - BBC Sport   |
       | webdriverIo | click        | elementclick           |
       | bing        | Arsenal      | Arsenal.com - Homepage |
 
+  @skip()
   Scenario Outline: Get to web page from google using lucky button
     Given Bob opens "google" page
     When Bob searches for "<search_param>" using the lucky button
